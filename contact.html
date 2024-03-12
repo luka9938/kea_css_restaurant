@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+  </head>
+  <body>
+    <header>
+      <h1>Resturant KEA</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Home page" target="_self">Home</a></li>
+        <li><a href="menu.html" title="See KEA menu" target="_self">Menu</a></li>
+        <li><a href="contact.html" title="Contact KEA resturant" target="_self">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <address>
+          <p>
+            Guldbergsgade 29N
+          </p>
+          <p>2200 Copenhagen</p>
+          <p>
+            Phone no.: <a href="#">20 82 53 70</a>
+          </p>
+          <p>
+            E-mail: <a href="#">info@restaurantkea.dk</a>
+          </p>
+        </address>
+        <form action="process.php" method="POST">
+          <fieldset>
+            <legend>Contact form</legend>
+            <div>
+                <label for="txtFullName">Full name</label>
+                <input type="text" id="txtFullName" name="full_name" required pattern="([A-Za-z-]+ )+[A-Za-z-]+">
+            </div>
+            <div>
+                <label for="txtPhoneNo">Phone no.</label>
+                <input type="text" id="txtPhoneNo" name="phone_no" required pattern="[0-9]{8}">
+            </div>
+            <div>
+                <label for="txtEmail">E-mail</label>
+                <input type="email" id="txtEmail" name="email" required>
+            </div>                    
+            <div>
+                <label for="txtPersons">Persons</label>
+                <input type="number" id="txtPersons" name="persons" value="2" required min="1" max="20">
+            </div>                    
+            <div>
+                <label for="txtDateTime">Date and time</label>
+                <input type="datetime-local" id="txtDateTime" name="date_and_time" required>
+            </div>                                        
+            <div id="form_information">
+                <label for="txtInformation">Further information</label><br>
+                <textarea id="txtInformation" name="further_information"></textarea>
+            </div>                                        
+            <input type="submit" value="Send">
+          </fieldset>
+        </form>
+      </section>
+      <section class="frame">
+        <img src="restaurant_assets/img/map.jpg" alt="">
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 KEA Web Development</p>
+    </footer>
+  </body>
+</html>

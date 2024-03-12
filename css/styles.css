@@ -1,0 +1,95 @@
+@import '_variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fontDefault);
+}
+
+header, footer {
+    font-family: var(--fontHighlight);
+    color: var(--colorSecondary);
+    background-color: var(--colorBg);
+}
+
+header {
+    padding: 0.5rem 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto 3rem;
+}
+
+footer {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: var(--fontHighlight);
+    font-weight: bold;
+}
+
+nav {
+    padding: 0.25rem 2rem;
+    border-bottom: solid 0.2rem var(--colorBg);
+    position: sticky;
+    top: 0;
+    background-color: var(--colorBgSecondary);
+}
+
+nav li {
+    font-size: 1.5rem;
+    display: block;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+nav li > a {
+    color: var(--colorSecondary);
+    font-family: var(--fontHighlight);
+    font-weight: bold;
+}
+
+nav li > a:hover {
+    color: var(--colorHighlight);
+    text-decoration: none;
+}
+
+nav li > a:active {
+    color: var(--colorHighlight);
+    text-decoration: none;
+}
+
+section, article {
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}

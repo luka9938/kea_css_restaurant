@@ -1,0 +1,99 @@
+@import 'styles.css';
+
+main  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1f 1fr;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section img {
+    width: clamp(300px, 100%, 500px);
+    height: clamp(150px, 100%, 300px);
+    object-fit: cover;
+}
+
+form, address {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-style: normal;
+
+}
+
+fieldset {
+    padding: 0.5rem;
+    border: thin solid var(--colorBgSecondary);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset > div {
+    padding: 0.3rem;
+    display: flex;
+}
+
+#form_information {
+    flex-direction: column;
+}
+
+legend {
+    margin-left: 1rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: inline-block;
+    width: 8rem;
+}
+
+input {
+    width: 100%;
+}
+
+input[type=submit] {
+    margin: 1rem;
+    width: auto;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--colorSecondary);
+    background-color: var(--colorBgSecondary);
+    border: none;
+}
+
+textarea {
+    width: 100%;
+}
+
+.frame {
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5rem;
+    border: thin solid var(--colorBgSecondary);
+}
+
+@media (max-width: 425px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    main > section:nth-child(2) {
+        grid-row: 1;
+    }
+
+    main > section:nth-child(1) {
+        grid-row: 2;
+    }
+}

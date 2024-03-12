@@ -1,0 +1,9 @@
+:root {
+    --colorSecondary: #fcf2c1;
+    --colorBg: darkred;
+    --colorBgSecondary: brown;
+    --colorHighlight: #ce5e4a;
+
+    --fontDefault: Verdana, Arial, sans-serif;
+    --fontHighlight: 'Optima', sans-serif;
+}
